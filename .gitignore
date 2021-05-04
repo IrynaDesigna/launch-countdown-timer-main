@@ -1,0 +1,4 @@
+# ignore everything in folder "design"
+design/
+
+style-guide.md

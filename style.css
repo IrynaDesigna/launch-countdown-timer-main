@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+body {
+  margin: 0;
+  background: url(images/pattern-hills.svg) center bottom no-repeat, url(images/bg-stars.svg), linear-gradient(hsl(235, 16%, 14%) , #241c2b);
+  min-height: 100vh;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  max-height: 100vh;
+  max-width: 100%;
+  position: relative;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(237, 18%, 59%);
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+}
+.attribution a {
+  color: hsl(345, 95%, 68%);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  color: hsl(237, 18%, 59%);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+}
+
+.timer-box {
+  background: linear-gradient(180deg, rgba(44,44,68,1) 0%, rgba(44,44,68,1) 50%, rgba(52,54,79,1) 50%, rgba(52,54,79,1) 100%);
+  margin: 0 15px 20px;
+  color: hsl(345, 95%, 68%);
+  font-size: 4rem;
+  border-radius: 12px;
+  height: 140px;
+  width: 140px;
+  display: grid;
+  place-content: center;
+  position: relative;
+  box-shadow: 0 10px hsl(234, 17%, 12%);
+}
+
+.timer-box::before {
+  content: "";
+  height: 12px;
+  width: 6px;
+  border-radius: 0 6px 6px 0;
+  position: absolute;
+  left: 0;
+  top: 64px;
+  background: hsl(234, 17%, 12%);
+}
+
+.timer-box::after {
+  content: "";
+  height: 12px;
+  width: 6px;
+  border-radius: 6px 0 0 6px;
+  position: absolute;
+  right: 0;
+  top: 64px;
+  background: hsl(234, 17%, 12%);
+}
+
+.contacts {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 60px;
+}
+
+.contacts a {
+  margin: 0 16px;
+}
+
+.contacts a:hover {
+  cursor: pointer;
+}
+
+.contacts a:hover svg path {
+  fill: hsl(345, 95%, 68%);
+  transition: 0.5s;
+}
