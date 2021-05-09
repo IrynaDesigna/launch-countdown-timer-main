@@ -1,4 +1,8 @@
 # ignore everything in folder "design"
 design/
+node_modules/
 
+package.json
+package-lock.json
+style.css
 style-guide.md

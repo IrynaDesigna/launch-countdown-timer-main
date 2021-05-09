@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap')
+@import "pattern"
+@import "mixins"
+@import "keyframes"
+
+body
+  margin: 0
+  background: url(../images/pattern-hills.svg) center bottom no-repeat, url(../images/bg-stars.svg), linear-gradient($verydarkblue , #241c2b)
+  height: 100vh
+  max-width: 100%
+  position: relative
+  text-align: center
+  @include grid(start,center)
+  padding: 1rem
+  box-sizing: border-box
+  line-height: 1.5
+  font-family: 'Red Hat Text', sans-serif
+  @media (max-width: 700px)
+    background: url(../images/pattern-hills.svg) right bottom no-repeat, url(../images/bg-stars.svg), linear-gradient($verydarkblue , #241c2b)
+
+.attribution
+  font-size: 11px
+  text-align: center
+  color: $softgrey
+  @include abs(auto,20px)
+  a
+    color: $pink
+
+.timer
+    @include flex(center,center)
+    color: $softgrey
+    font-size: $small
+    text-transform: uppercase
+
+h1
+    font-size: 1rem
+    text-transform: uppercase
+    color: $white
+    margin: 5rem 0
+    letter-spacing: 6px
+
+.timer-box-container
+  position: relative
+
+.timer-box
+  background: linear-gradient(180deg, rgba(44,44,68,1) 0%, rgba(44,44,68,1) 50%, rgba(52,54,79,1) 50%, rgba(52,54,79,1) 100%)
+  margin: 0 15px 20px
+  color: $pink
+  font-size: 4rem
+  border-radius: 12px
+  height: 140px
+  width: 140px
+  @include grid
+  position: relative
+  box-shadow: 0 10px $blackblue
+  &::before
+    @include half-circle
+    top: 64px
+    border-radius: 0 6px 6px 0
+    left: 0
+  &::after
+    @include half-circle
+    top: 64px
+    border-radius: 6px 0 0 6px
+    right: 0
+  @media (max-width: 1050px)
+    width: 100px
+    height: 100px
+    &::after, &::before
+      top: 44px
+  @media (max-width: 700px)
+    box-shadow: 0 5px $blackblue
+    margin: 0 5px 10px
+    width: 70px
+    height: 70px
+    font-size: 2rem
+    &::after, &::before
+      top: 32px
+      height: 6px
+      width: 3px
+
+
+.flip-card
+  height: 70px
+  width: 140px
+  border-radius: 12px 12px 0 0
+  @include abs(-10px,auto)
+  left: 15px
+  background: rgba(44,44,68,1)
+  text-align: center
+  overflow: hidden
+  &.flipped
+    animation: flip-card 1s linear 1
+    & span
+      animation: flip-card-inner 1s linear 1
+  & span
+    @include abs(23px,auto)
+    color: $pink
+    font-size: 4rem
+  @media (max-width: 1050px)
+    width: 100px
+    height: 50px
+    & span
+      top: 3px
+    &.flipped
+      animation: flip-card-2 1s linear 1
+  @media (max-width: 700px)
+    left: 5px
+    width: 70px
+    height: 35px
+    & span
+      font-size: 2rem
+      top: 11px
+    &.flipped
+      animation: flip-card-3 1s linear 1
+
+
+
+
+.contacts
+  @include abs(auto,60px)
+  a
+    margin: 0 16px
+    &:hover
+      cursor: pointer
+      & svg path
+        fill: $pink
+        transition: .5s

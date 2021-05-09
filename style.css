@@ -58,6 +58,89 @@ h1 {
   box-shadow: 0 10px hsl(234, 17%, 12%);
 }
 
+/* flipping */
+
+.timer-box-container {
+  position: relative;
+}
+
+#seconds-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  overflow: hidden;
+}
+
+@keyframes flip {
+  from {
+    transform: skew(20deg) translateX(-10px);
+  }
+
+  to {
+    transform: rotateX(180deg) translateY(-70px);
+  }
+}
+
+.timer-box-front {
+  /* transform: rotate3d(70, 0, 0, 180deg) translateY(-70px); */
+  opacity: 0.5;
+  animation: flip 1s linear 1;
+  /* transition: .6s; */
+}
+
+/* .timer-box-container {
+  position: relative;
+}
+
+.timer-box-front {
+  background: rgba(52,54,79,1);
+  height: 70px;
+  width: 140px;
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: hsl(345, 95%, 68%);
+  font-size: 4rem;
+  box-sizing: border-box;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.timer-box-front p {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 4rem;
+}
+
+.timer-box-back {
+  background: rgba(44,44,68,1);
+  height: 70px;
+  width: 140px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  color: hsl(345, 95%, 68%);
+  font-size: 4rem;
+  box-sizing: border-box;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.timer-box-back p {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -4rem;
+} */
+
+
+
+/* end flipping */
+
 .timer-box::before {
   content: "";
   height: 12px;
@@ -67,6 +150,7 @@ h1 {
   left: 0;
   top: 64px;
   background: hsl(234, 17%, 12%);
+  z-index: 1000;
 }
 
 .timer-box::after {
@@ -78,6 +162,8 @@ h1 {
   right: 0;
   top: 64px;
   background: hsl(234, 17%, 12%);
+  z-index: 1000;
+
 }
 
 .contacts {

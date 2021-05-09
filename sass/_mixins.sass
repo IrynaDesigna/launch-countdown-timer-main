@@ -1,0 +1,23 @@
+@mixin abs($top, $bottom)
+    position: absolute
+    right: 0
+    left: 0
+    top: $top
+    bottom: $bottom
+
+@mixin flex($j-cont, $align-i)
+    display: flex
+    justify-content: $j-cont
+    align-items: $align-i
+
+@mixin grid($heght: center,$width: center)
+  display: grid
+  place-content: $heght $width
+
+@mixin half-circle
+  content: ""
+  height: 12px
+  width: 6px
+  position: absolute
+  background: $blackblue
+  z-index: 1000
