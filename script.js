@@ -81,8 +81,8 @@ function startTimer(id, launchDay) {
 
 // Getting launchDay **************** today + 3days
 window.onload = function() {
-//   let launchDay = new Date(2021,4,31,14,30,00);
-  let launchDay = new Date();
-  launchDay.setDate(launchDay.getDate() + 3);
+  let launchDay = new Date(2021,4,31,14,30,00);
+//   let launchDay = new Date();
+//   launchDay.setDate(launchDay.getDate() + 3);
   startTimer('timer', launchDay);
 }
