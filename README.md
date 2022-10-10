@@ -4,8 +4,8 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Web-Designa/launch-countdown-timer-main)
-- Live Site URL: [Add live site URL here](https://web-designa.github.io/launch-countdown-timer-main/)
+- Solution URL: [Add solution URL here](https://github.com/IrynaDesigna/launch-countdown-timer-main)
+- Live Site URL: [Add live site URL here](https://IrynaDesigna.github.io/launch-countdown-timer-main/)
 
 ### Built with
 
